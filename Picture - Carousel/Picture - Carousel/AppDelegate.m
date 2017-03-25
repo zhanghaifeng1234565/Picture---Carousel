@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "CarouselViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    ViewController *VC = [[ViewController alloc] init];
-    _window.rootViewController = VC;
+    CarouselViewController *vc = [[CarouselViewController alloc] init];
+    _window.rootViewController = vc;
     _window.backgroundColor = [UIColor whiteColor];
     [_window makeKeyAndVisible];
     return YES;

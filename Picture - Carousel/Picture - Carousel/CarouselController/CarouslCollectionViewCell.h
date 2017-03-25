@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CarouslCollectionViewCell.h
 //  Picture - Carousel
 //
 //  Created by zhanghaifeng on 2017/3/25.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CarouslCollectionViewCell : UICollectionViewCell
 
 @end
-
