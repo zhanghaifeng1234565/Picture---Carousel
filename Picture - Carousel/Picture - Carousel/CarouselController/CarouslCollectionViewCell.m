@@ -8,7 +8,18 @@
 
 #import "CarouslCollectionViewCell.h"
 
-@implementation CarouslCollectionViewCell
+@interface CarouslCollectionViewCell()
+
+@end
+
+@implementation CarouslCollectionViewCell {
+    UIImageView *_carouslImageView;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self setUpUI];
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -19,6 +30,19 @@
 
 - (void)setUpUI {
     
+    _carouslImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    [self.contentView addSubview:_carouslImageView];
+    
 }
+
+- (void)setUrl:(NSURL *)url {
+    _url = url;
+    
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *image = [UIImage imageWithData:data];
+    
+    _carouslImageView.image = image;
+}
+
 
 @end

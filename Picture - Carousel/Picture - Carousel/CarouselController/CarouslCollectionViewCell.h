@@ -10,4 +10,6 @@
 
 @interface CarouslCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic) NSURL *url;
+
 @end

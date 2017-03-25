@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarouselView : UIView
+@interface CarouselView : UICollectionView
+
+- (instancetype)initWithURLs:(NSArray <NSURL *> *)urls didSelectedIndex:(void (^)(NSInteger index))selectedIndex;
 
 @end

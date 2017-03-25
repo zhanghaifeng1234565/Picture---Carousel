@@ -20,8 +20,8 @@
     self.minimumLineSpacing = 0;
     self.minimumInteritemSpacing = 0;
     
-    self.collectionView.showsVerticalScrollIndicator = YES;
-    self.collectionView.showsHorizontalScrollIndicator = YES;
+    self.collectionView.showsVerticalScrollIndicator = NO;
+    self.collectionView.showsHorizontalScrollIndicator = NO;
     
     self.collectionView.bounces = NO;
     self.collectionView.pagingEnabled = YES;

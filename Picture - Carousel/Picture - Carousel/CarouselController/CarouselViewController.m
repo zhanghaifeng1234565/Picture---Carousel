@@ -13,32 +13,40 @@
 
 @interface CarouselViewController ()
 
-@property (nonatomic, strong) UIView *carouselView;
-
 @end
 
-@implementation CarouselViewController
+@implementation CarouselViewController {
+    NSArray <NSURL *> *_urls;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setUpUI];
 }
 
 - (void)setUpUI {
     
-    self.carouselView = [[CarouselView alloc] initWithFrame:CGRectMake(30, 30, KWindowW, 200)];
-    [self.view addSubview:self.carouselView];
+    [self loadCarouslImageData];
+    CarouselView *carouslView = [[CarouselView alloc]  initWithURLs:_urls didSelectedIndex:^(NSInteger index) {
+        
+    }];
+    carouslView.frame = CGRectMake(30, 30, KWindowW, 200);
+    [self.view addSubview:carouslView];
     
 }
 
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+#pragma mark - loadData
+- (void)loadCarouslImageData {
     
-}
+    NSMutableArray *arrM = [NSMutableArray array];
+    for (int i = 0; i < 5; i++) {
+        NSString *imageName = [NSString stringWithFormat:@"Snip%zd.png", i+1];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:imageName withExtension:nil];
+        [arrM addObject:url];
+    }
+    _urls = arrM.copy;
 
+}
 
 
 @end
