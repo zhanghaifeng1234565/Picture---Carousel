@@ -10,6 +10,7 @@
 
 @interface CarouselView : UICollectionView
 
+/// 重写初始化方法
 - (instancetype)initWithURLs:(NSArray <NSURL *> *)urls didSelectedIndex:(void (^)(NSInteger index))selectedIndex;
 
 @end

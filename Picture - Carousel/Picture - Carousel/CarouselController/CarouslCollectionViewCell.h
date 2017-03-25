@@ -10,6 +10,9 @@
 
 @interface CarouslCollectionViewCell : UICollectionViewCell
 
+/**
+ 接收图片数据的 url
+ */
 @property (nonatomic) NSURL *url;
 
 @end
