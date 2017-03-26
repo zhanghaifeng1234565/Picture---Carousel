@@ -15,4 +15,6 @@
  */
 @property (nonatomic) NSURL *url;
 
+@property (nonatomic, weak) UIPageControl *pageControl;
+
 @end

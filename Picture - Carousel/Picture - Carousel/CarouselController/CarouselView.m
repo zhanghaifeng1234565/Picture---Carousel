@@ -9,12 +9,17 @@
 #import "CarouselView.h"
 #import "CarouslFlowLayout.h"
 #import "CarouslCollectionViewCell.h"
+#import "Masonry.h"
 
 static NSString *CarouselcollectionViewId = @"CarouselcollectionViewId";
+
+#define KSectionCount 100
 
 @interface CarouselView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, copy) void (^selectedCallBack)(NSInteger index);
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) UIPageControl *pageControl;
 
 @end
 
@@ -23,8 +28,11 @@ static NSString *CarouselcollectionViewId = @"CarouselcollectionViewId";
 }
 
 - (instancetype)initWithURLs:(NSArray<NSURL *> *)urls didSelectedIndex:(void (^)(NSInteger index))selectedIndex {
+    
     self = [super initWithFrame:CGRectZero collectionViewLayout:[[CarouslFlowLayout alloc] init]];
     if (self) {
+        
+        [self addTimer];
         _urls = urls;
         _selectedCallBack = selectedIndex;
         
@@ -45,9 +53,7 @@ static NSString *CarouselcollectionViewId = @"CarouselcollectionViewId";
     return self;
 }
 
-
 #pragma mark - <UICollectionViewDataSource>
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _urls.count * (_urls.count == 1 ? 1:100);
 }
@@ -57,6 +63,8 @@ static NSString *CarouselcollectionViewId = @"CarouselcollectionViewId";
     CarouslCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CarouselcollectionViewId forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
     cell.url = _urls[indexPath.item % _urls.count];
+    self.pageControl = cell.pageControl;
+    
     return cell;
     
 }
@@ -80,5 +88,54 @@ static NSString *CarouselcollectionViewId = @"CarouselcollectionViewId";
     }
     
 }
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+    self.timer.fireDate = [NSDate distantFuture];
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+
+    self.timer.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
+    
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+
+    [self scrollViewDidEndDecelerating:scrollView];
+    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    NSInteger page = (scrollView.contentOffset.x / scrollView.bounds.size.width) + 0.499;
+    NSInteger pageNO = page % _urls.count;
+    self.pageControl.currentPage = pageNO;
+    
+}
+
+#pragma mark - <timer>
+- (void)addTimer {
+    
+    self.timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+}
+
+- (void)nextPage {
+    
+    NSInteger page = self.pageControl.currentPage;
+    NSIndexPath *scrollToPath = nil;
+    if (page == _urls.count - 1) {
+        scrollToPath = [NSIndexPath indexPathForItem:0 inSection:0];
+    } else {
+        scrollToPath = [NSIndexPath indexPathForItem:page + 1 inSection:0];
+    }
+    
+    [self scrollToItemAtIndexPath:scrollToPath atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    
+}
+
 
 @end

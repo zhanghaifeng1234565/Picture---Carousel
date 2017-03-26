@@ -7,6 +7,7 @@
 //
 
 #import "CarouslCollectionViewCell.h"
+#import "Masonry.h"
 
 @interface CarouslCollectionViewCell()
 
@@ -33,6 +34,18 @@
     _carouslImageView = [[UIImageView alloc] initWithFrame:self.bounds];
     [self.contentView addSubview:_carouslImageView];
     
+    UIPageControl *pageControl = [[UIPageControl alloc] init];
+    pageControl.numberOfPages = 5;
+    pageControl.currentPageIndicatorTintColor = [UIColor darkGrayColor];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.enabled = NO;
+    [self.contentView addSubview:pageControl];
+    [pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.contentView.mas_bottom).offset(-5);
+        make.centerX.equalTo(self.contentView);
+        make.height.mas_equalTo(20);
+    }];
+    self.pageControl = pageControl;
 }
 
 - (void)setUrl:(NSURL *)url {
