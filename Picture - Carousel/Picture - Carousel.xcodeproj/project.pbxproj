@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9D9BF4BF5E96C75F411B1126 /* libPods-Picture - Carousel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9E78CDB1CE871A8D5766B4 /* libPods-Picture - Carousel.a */; };
+		E31C9D2B1E87C80E00E71A8B /* Snip1.png in Resources */ = {isa = PBXBuildFile; fileRef = E31C9D261E87C80E00E71A8B /* Snip1.png */; };
+		E31C9D2C1E87C80E00E71A8B /* Snip2.png in Resources */ = {isa = PBXBuildFile; fileRef = E31C9D271E87C80E00E71A8B /* Snip2.png */; };
+		E31C9D2D1E87C80E00E71A8B /* Snip3.png in Resources */ = {isa = PBXBuildFile; fileRef = E31C9D281E87C80E00E71A8B /* Snip3.png */; };
+		E31C9D2E1E87C80E00E71A8B /* Snip4.png in Resources */ = {isa = PBXBuildFile; fileRef = E31C9D291E87C80E00E71A8B /* Snip4.png */; };
+		E31C9D2F1E87C80E00E71A8B /* Snip5.png in Resources */ = {isa = PBXBuildFile; fileRef = E31C9D2A1E87C80E00E71A8B /* Snip5.png */; };
 		E3A4823D1E85E8C0009E2F19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A4823C1E85E8C0009E2F19 /* main.m */; };
 		E3A482401E85E8C0009E2F19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A4823F1E85E8C0009E2F19 /* AppDelegate.m */; };
 		E3A482461E85E8C0009E2F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A482441E85E8C0009E2F19 /* Main.storyboard */; };
@@ -18,11 +23,6 @@
 		E3A482661E862EA3009E2F19 /* CarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A482651E862EA3009E2F19 /* CarouselView.m */; };
 		E3A482691E8632FE009E2F19 /* CarouslFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A482681E8632FE009E2F19 /* CarouslFlowLayout.m */; };
 		E3A4826C1E863789009E2F19 /* CarouslCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A4826B1E863789009E2F19 /* CarouslCollectionViewCell.m */; };
-		E3A482751E8649DA009E2F19 /* Snip1.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A482701E8649DA009E2F19 /* Snip1.png */; };
-		E3A482761E8649DA009E2F19 /* Snip2.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A482711E8649DA009E2F19 /* Snip2.png */; };
-		E3A482771E8649DA009E2F19 /* Snip3.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A482721E8649DA009E2F19 /* Snip3.png */; };
-		E3A482781E8649DA009E2F19 /* Snip4.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A482731E8649DA009E2F19 /* Snip4.png */; };
-		E3A482791E8649DA009E2F19 /* Snip5.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A482741E8649DA009E2F19 /* Snip5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,11 @@
 /* Begin PBXFileReference section */
 		16E43302F6DA80D25293184C /* Pods-Picture - Carousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picture - Carousel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Picture - Carousel/Pods-Picture - Carousel.debug.xcconfig"; sourceTree = "<group>"; };
 		A96636369011316B118673A2 /* Pods-Picture - Carousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picture - Carousel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Picture - Carousel/Pods-Picture - Carousel.release.xcconfig"; sourceTree = "<group>"; };
+		E31C9D261E87C80E00E71A8B /* Snip1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip1.png; sourceTree = "<group>"; };
+		E31C9D271E87C80E00E71A8B /* Snip2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip2.png; sourceTree = "<group>"; };
+		E31C9D281E87C80E00E71A8B /* Snip3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip3.png; sourceTree = "<group>"; };
+		E31C9D291E87C80E00E71A8B /* Snip4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip4.png; sourceTree = "<group>"; };
+		E31C9D2A1E87C80E00E71A8B /* Snip5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip5.png; sourceTree = "<group>"; };
 		E3A482381E85E8C0009E2F19 /* Picture - Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picture - Carousel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A4823C1E85E8C0009E2F19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3A4823E1E85E8C0009E2F19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,11 +62,6 @@
 		E3A482681E8632FE009E2F19 /* CarouslFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouslFlowLayout.m; sourceTree = "<group>"; };
 		E3A4826A1E863789009E2F19 /* CarouslCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouslCollectionViewCell.h; sourceTree = "<group>"; };
 		E3A4826B1E863789009E2F19 /* CarouslCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouslCollectionViewCell.m; sourceTree = "<group>"; };
-		E3A482701E8649DA009E2F19 /* Snip1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip1.png; sourceTree = "<group>"; };
-		E3A482711E8649DA009E2F19 /* Snip2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip2.png; sourceTree = "<group>"; };
-		E3A482721E8649DA009E2F19 /* Snip3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip3.png; sourceTree = "<group>"; };
-		E3A482731E8649DA009E2F19 /* Snip4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip4.png; sourceTree = "<group>"; };
-		E3A482741E8649DA009E2F19 /* Snip5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip5.png; sourceTree = "<group>"; };
 		FD9E78CDB1CE871A8D5766B4 /* libPods-Picture - Carousel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Picture - Carousel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -164,11 +164,11 @@
 				E3A482681E8632FE009E2F19 /* CarouslFlowLayout.m */,
 				E3A4826A1E863789009E2F19 /* CarouslCollectionViewCell.h */,
 				E3A4826B1E863789009E2F19 /* CarouslCollectionViewCell.m */,
-				E3A482701E8649DA009E2F19 /* Snip1.png */,
-				E3A482711E8649DA009E2F19 /* Snip2.png */,
-				E3A482721E8649DA009E2F19 /* Snip3.png */,
-				E3A482731E8649DA009E2F19 /* Snip4.png */,
-				E3A482741E8649DA009E2F19 /* Snip5.png */,
+				E31C9D261E87C80E00E71A8B /* Snip1.png */,
+				E31C9D271E87C80E00E71A8B /* Snip2.png */,
+				E31C9D281E87C80E00E71A8B /* Snip3.png */,
+				E31C9D291E87C80E00E71A8B /* Snip4.png */,
+				E31C9D2A1E87C80E00E71A8B /* Snip5.png */,
 			);
 			path = CarouselController;
 			sourceTree = "<group>";
@@ -260,14 +260,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3A482771E8649DA009E2F19 /* Snip3.png in Resources */,
 				E3A4824B1E85E8C0009E2F19 /* LaunchScreen.storyboard in Resources */,
-				E3A482781E8649DA009E2F19 /* Snip4.png in Resources */,
+				E31C9D2C1E87C80E00E71A8B /* Snip2.png in Resources */,
 				E3A482481E85E8C0009E2F19 /* Assets.xcassets in Resources */,
-				E3A482791E8649DA009E2F19 /* Snip5.png in Resources */,
-				E3A482751E8649DA009E2F19 /* Snip1.png in Resources */,
+				E31C9D2F1E87C80E00E71A8B /* Snip5.png in Resources */,
 				E3A482461E85E8C0009E2F19 /* Main.storyboard in Resources */,
-				E3A482761E8649DA009E2F19 /* Snip2.png in Resources */,
+				E31C9D2B1E87C80E00E71A8B /* Snip1.png in Resources */,
+				E31C9D2E1E87C80E00E71A8B /* Snip4.png in Resources */,
+				E31C9D2D1E87C80E00E71A8B /* Snip3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

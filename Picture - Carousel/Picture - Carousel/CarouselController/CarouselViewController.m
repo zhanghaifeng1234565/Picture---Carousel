@@ -22,15 +22,15 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
     [self setUpUI];
 }
 
 - (void)setUpUI {
     
     [self loadCarouslImageData];
-    CarouselView *carouslView = [[CarouselView alloc]  initWithURLs:_urls didSelectedIndex:^(NSInteger index) {
-        
+    CarouselView *carouslView = [[CarouselView alloc] init];
+    [carouslView dataWithURLs:_urls didSelectedIndex:^(NSIndexPath *index) {
+//        NSLog(@"第%zd组-第%zd行", index.section, index.item);
     }];
     carouslView.frame = CGRectMake(30, 30, KWindowW, 200);
     [self.view addSubview:carouslView];

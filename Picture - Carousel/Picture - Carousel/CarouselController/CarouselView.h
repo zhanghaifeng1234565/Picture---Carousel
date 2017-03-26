@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarouselView : UICollectionView
+@interface CarouselView : UIView
 
-/// 重写初始化方法
-- (instancetype)initWithURLs:(NSArray <NSURL *> *)urls didSelectedIndex:(void (^)(NSInteger index))selectedIndex;
+/// 提供接口让外界传入 URL, 通过 Block 回调选中的索引
+- (void)dataWithURLs:(NSArray <NSURL *> *)urls didSelectedIndex:(void (^)(NSIndexPath *index))selectedIndex;
 
 @end
