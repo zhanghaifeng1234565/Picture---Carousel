@@ -15,6 +15,9 @@
  */
 @property (nonatomic) NSURL *url;
 
+/**
+ 接收分页指示器是属性
+ */
 @property (nonatomic, weak) UIPageControl *pageControl;
 
 @end

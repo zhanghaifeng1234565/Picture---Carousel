@@ -137,5 +137,18 @@ static NSString *CarouselcollectionViewId = @"CarouselcollectionViewId";
     
 }
 
+- (void)removeFromSuperview {
+    [super removeFromSuperview];
+    [self.timer invalidate];
+}
+
+#pragma mark - 测试代码, 检验 timer 是否销毁
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [self removeFromSuperview];
+}
+
+- (void)dealloc {
+    NSLog(@"我要走了我是 - %@", self.timer);
+}
 
 @end
